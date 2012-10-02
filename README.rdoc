@@ -1,5 +1,13 @@
 =Dirty Associations
 
+For use in another project, I removed the need to call dirty_associations in a block.  Instead, just call record.enable_dirty_assocations to build the methods.  
+Associations tracked by the previous call to enable_dirty_associations is immediately cleared instead or cleared after the yield in the block (as there is no longer a block).
+
+In addition, the following methods are available on a record:
+associations_changed -> an array of association names whose values have been changed
+is_collection? -> true if it represents a has_many or HABTM association
+is_singular? -> true if it's a belongs_to or has_one association
+
 This plugin adds dirty-attribute-like methods for your model's associations.  The usage is very similar to the dirty objects behavior in Rails, except that due to the high database-overhead of the initialization process, you have to explicitly enable this functionality.
 Once enabled, you get the following methods for specified collection associations (one-to-many, many-to-many):
 
