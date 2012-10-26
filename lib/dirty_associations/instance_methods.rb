@@ -27,15 +27,15 @@ module DirtyAssociations
      end
 
      # Generate the methods for each association, and record the initial state of each association specified.
-     def initialize_dirty_associations
+     def initialize_dirty_associations(original_record)
        self.class.dirty_associations.each do |association|
          builder = DirtyAssociations::Builder.new(association, self)
          builder.generate_dirty_methods!
          
          # Record the initial state of the association #
          case
-         when builder.association_is_collection?  then  record_initial_collection_association_state!(association)
-         when builder.association_is_singular?    then  record_initial_singular_association_state!(association)
+         when builder.association_is_collection?  then  record_initial_collection_association_state!(original_record, association)
+         when builder.association_is_singular?    then  record_initial_singular_association_state!(original_record, association)
          end
        end
      end
@@ -90,13 +90,13 @@ module DirtyAssociations
      private
 
      # Record the association id from a singular association
-     def record_initial_singular_association_state!(association)
-       original_associations["#{association}".to_sym] = __send__("#{association}_id".to_sym)
+     def record_initial_singular_association_state!(original_record, association)
+       original_associations["#{association}".to_sym] = original_record.__send__("#{association}_id".to_sym)
      end
 
      # Record the association ids from a collection association     
      def record_initial_collection_association_state!(association)
-       original_associations["#{association}".to_sym] = __send__("#{association.to_s.singularize}_ids".to_sym).dup
+       original_associations["#{association}".to_sym] = original_record.__send__("#{association.to_s.singularize}_ids".to_sym).dup
      end
      
      # Holds the original association ids for tracked associations

@@ -1,0 +1,59 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ActiveSupport	test/test_helper.rb	/^class ActiveSupport::TestCase$/;"	c
+Base	lib/dirty_associations/base.rb	/^  module Base$/;"	m	class:DirtyAssociations
+Builder	lib/dirty_associations/builder.rb	/^  class Builder < Struct.new :association_name, :base$/;"	c	class:DirtyAssociations
+BuilderTest	test/builder_test.rb	/^class BuilderTest < ActiveSupport::TestCase$/;"	c
+CollectionMethods	lib/dirty_associations/collection_methods.rb	/^  module CollectionMethods$/;"	m	class:DirtyAssociations
+Comment	test/model_definitions.rb	/^class Comment < ActiveRecord::Base$/;"	c
+Dependency	test/model_definitions.rb	/^class Dependency < ActiveRecord::Base$/;"	c
+DirtyAssociations	lib/dirty_associations.rb	/^module DirtyAssociations$/;"	m
+DirtyAssociations	lib/dirty_associations/base.rb	/^module DirtyAssociations$/;"	m
+DirtyAssociations	lib/dirty_associations/builder.rb	/^module DirtyAssociations$/;"	m
+DirtyAssociations	lib/dirty_associations/collection_methods.rb	/^module DirtyAssociations$/;"	m
+DirtyAssociations	lib/dirty_associations/instance_methods.rb	/^module DirtyAssociations$/;"	m
+DirtyAssociations	lib/dirty_associations/singular_methods.rb	/^module DirtyAssociations$/;"	m
+DirtyAssociations	lib/dirty_associations/version.rb	/^module DirtyAssociations$/;"	m
+DirtyAssociationsTest	test/dirty_associations_test.rb	/^class DirtyAssociationsTest < ActiveSupport::TestCase$/;"	c
+InstanceMethods	lib/dirty_associations/instance_methods.rb	/^  module InstanceMethods$/;"	m	class:DirtyAssociations
+InvalidAssociationError	lib/dirty_associations.rb	/^  class InvalidAssociationError < ArgumentError; end;$/;"	c	class:DirtyAssociations
+Keyword	test/dirty_associations_test.rb	/^      class Keyword < ActiveRecord::Base$/;"	c
+Keyword	test/model_definitions.rb	/^class Keyword < ActiveRecord::Base $/;"	c
+Railtie	lib/dirty_associations.rb	/^  class Railtie < ::Rails::Railtie$/;"	c	class:DirtyAssociations.InvalidAssociationError
+SingularMethods	lib/dirty_associations/singular_methods.rb	/^  module SingularMethods$/;"	m	class:DirtyAssociations
+Task	test/model_definitions.rb	/^class Task < ActiveRecord::Base $/;"	c
+Todo	test/model_definitions.rb	/^class Todo < ActiveRecord::Base $/;"	c
+User	test/model_definitions.rb	/^class User < ActiveRecord::Base $/;"	c
+association_is_collection?	lib/dirty_associations/builder.rb	/^    def association_is_collection?$/;"	f	class:DirtyAssociations.Builder
+association_is_singular?	lib/dirty_associations/builder.rb	/^    def association_is_singular?$/;"	f	class:DirtyAssociations.Builder
+association_type	lib/dirty_associations/builder.rb	/^    def association_type$/;"	f	class:DirtyAssociations.Builder
+association_type	lib/dirty_associations/instance_methods.rb	/^    def association_type(association_name)$/;"	f	class:DirtyAssociations.InstanceMethods
+associations_changed	lib/dirty_associations/instance_methods.rb	/^     def associations_changed$/;"	f	class:DirtyAssociations.InstanceMethods
+associations_changed?	lib/dirty_associations/instance_methods.rb	/^     def associations_changed?$/;"	f	class:DirtyAssociations.InstanceMethods
+clear_association_changes	lib/dirty_associations/instance_methods.rb	/^     def clear_association_changes$/;"	f	class:DirtyAssociations.InstanceMethods
+enable_dirty_associations	lib/dirty_associations/instance_methods.rb	/^     def enable_dirty_associations$/;"	f	class:DirtyAssociations.InstanceMethods
+generate_collection_id_methods!	lib/dirty_associations/collection_methods.rb	/^    def generate_collection_id_methods!$/;"	f	class:DirtyAssociations.CollectionMethods
+generate_collection_methods!	lib/dirty_associations/collection_methods.rb	/^    def generate_collection_methods!$/;"	f	class:DirtyAssociations.CollectionMethods
+generate_collection_object_methods!	lib/dirty_associations/collection_methods.rb	/^    def generate_collection_object_methods!$/;"	f
+generate_dirty_methods!	lib/dirty_associations/builder.rb	/^    def generate_dirty_methods!$/;"	f	class:DirtyAssociations.Builder
+generate_singular_id_methods!	lib/dirty_associations/singular_methods.rb	/^    def generate_singular_id_methods!$/;"	f	class:DirtyAssociations.SingularMethods
+generate_singular_methods!	lib/dirty_associations/singular_methods.rb	/^    def generate_singular_methods!$/;"	f	class:DirtyAssociations.SingularMethods
+generate_singular_object_methods!	lib/dirty_associations/singular_methods.rb	/^    def generate_singular_object_methods!$/;"	f
+initialize	lib/dirty_associations/builder.rb	/^    def initialize(association_name,base)$/;"	f	class:DirtyAssociations.Builder
+initialize_dirty_associations	lib/dirty_associations/instance_methods.rb	/^     def initialize_dirty_associations$/;"	f	class:DirtyAssociations.InstanceMethods
+is_collection?	lib/dirty_associations/instance_methods.rb	/^    def is_collection?(association_name)$/;"	f	class:DirtyAssociations.InstanceMethods
+is_singular?	lib/dirty_associations/instance_methods.rb	/^    def is_singular?(association_name)$/;"	f	class:DirtyAssociations.InstanceMethods
+is_valid_association?	lib/dirty_associations/instance_methods.rb	/^     def is_valid_association?(association_name)$/;"	f	class:DirtyAssociations.InstanceMethods
+keep_track_of	lib/dirty_associations/base.rb	/^    def keep_track_of(*associations)$/;"	f	class:DirtyAssociations.Base
+load_test_data	test/test_helper.rb	/^def load_test_data$/;"	f
+load_test_schema	test/test_helper.rb	/^def load_test_schema $/;"	f
+original_associations	lib/dirty_associations/instance_methods.rb	/^     def original_associations$/;"	f	class:DirtyAssociations.InstanceMethods
+populate_dirty_associtaions_with_all_associations!	lib/dirty_associations/instance_methods.rb	/^     def populate_dirty_associtaions_with_all_associations!$/;"	f	class:DirtyAssociations.InstanceMethods
+record_initial_collection_association_state!	lib/dirty_associations/instance_methods.rb	/^     def record_initial_collection_association_state!(association)$/;"	f	class:DirtyAssociations.InstanceMethods
+record_initial_singular_association_state!	lib/dirty_associations/instance_methods.rb	/^     def record_initial_singular_association_state!(association)$/;"	f	class:DirtyAssociations.InstanceMethods
+remove_test_data	test/test_helper.rb	/^def remove_test_data$/;"	f
+validate_dirty_associations	lib/dirty_associations/instance_methods.rb	/^     def validate_dirty_associations$/;"	f	class:DirtyAssociations.InstanceMethods
