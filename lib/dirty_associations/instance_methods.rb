@@ -4,7 +4,7 @@ module DirtyAssociations
 
      # Called on an instance of the model whose associations we're interested in.  Inside the block,
      # any changes to the associations are tracked. After the block is executed, the associations are reset.
-     def enable_dirty_associations
+     def enable_dirty_associations(original_record)
        # (&block)
        # raise ArgumentError, 'Must be called with a block!' unless block_given?
        
@@ -19,7 +19,7 @@ module DirtyAssociations
        validate_dirty_associations
        
        # Initialize the initial values and construct the dirty methods for each association
-       initialize_dirty_associations
+       initialize_dirty_associations(original_record)
        # yield
        
        # Clear out when the block ends
