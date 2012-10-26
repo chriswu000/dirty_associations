@@ -95,7 +95,7 @@ module DirtyAssociations
      end
 
      # Record the association ids from a collection association     
-     def record_initial_collection_association_state!(association)
+     def record_initial_collection_association_state!(original_record, association)
        original_associations["#{association}".to_sym] = original_record.__send__("#{association.to_s.singularize}_ids".to_sym).dup
      end
      
